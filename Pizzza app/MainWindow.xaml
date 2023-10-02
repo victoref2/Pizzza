@@ -1,0 +1,26 @@
+﻿<Window x:Class="Pizzza_app.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pizzza_app"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="900">
+    <Grid Margin="0,0,0,-6">
+        <DataGrid x:Name="MenuSelect" d:ItemsSource="{Binding}" Margin="23,71,520,33" SelectionChanged="DataGrid_SelectionChanged" AutoGenerateColumns="True"/>
+        <ComboBox x:Name="Selection" Margin="23,15,728,447" SelectionChanged="ComboBox_SelectionChanged" SelectedIndex="0"/>
+        <Button x:Name="Buy_check_out" Content="køb" HorizontalAlignment="Left" Margin="439,370,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="Buy_check_out_Click"/>
+        <Button x:Name="Fjern_Remove" Content="Fjern" HorizontalAlignment="Left" Margin="439,230,0,0" VerticalAlignment="Top" Click="Button_Click" Height="50" Width="50"/>
+        <Button x:Name="ADD" Content="ADD" HorizontalAlignment="Left" Margin="439,300,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="ADD_Click"/>
+        <Label Content="Checkout list" HorizontalAlignment="Left" Margin="656,17,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="CartItemsGrid" AutoGenerateColumns="False" ItemsSource="{Binding ElementName=CartItems, Path=Items}" Margin="539,66,48,33">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Number" Binding="{Binding MenuItem.Number}" />
+                <DataGridTextColumn Header="Name" Binding="{Binding MenuItem.Name}" />
+                <DataGridTextColumn Header="Price" Binding="{Binding MenuItem.Price}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="Custom_pizza" Content="Custom" HorizontalAlignment="Left" Margin="439,138,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>

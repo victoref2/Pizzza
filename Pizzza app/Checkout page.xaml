@@ -1,0 +1,16 @@
+﻿<Window x:Class="Pizzza_app.Checkout_page"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pizzza_app"
+        mc:Ignorable="d"
+        Title="Checkout_page" Height="450" Width="800">
+    <Grid>
+        <Label Content="Thanks for buying" HorizontalAlignment="Left" Margin="79,32,0,0" VerticalAlignment="Top" Height="110" Width="600" FontSize="72"/>
+        <TextBox x:Name="Price" HorizontalAlignment="Left" Margin="133,365,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36"/>
+        <Label Content="DKK" HorizontalAlignment="Left" Margin="97,361,0,0" VerticalAlignment="Top" Height="25" Width="36"/>
+        <DataGrid x:Name="Checkout_grid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="97,141,125,78" AutoGenerateColumns="True" SelectionChanged="DataGrid_SelectionChanged"/>
+
+    </Grid>
+</Window>
