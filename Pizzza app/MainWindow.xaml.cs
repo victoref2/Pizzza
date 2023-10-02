@@ -105,7 +105,9 @@ namespace Pizzza_app
         new Toppings { Topping = "ham", ToppingPrice = 0},//16
         new Toppings { Topping = "pineapple", ToppingPrice = 0 },//17
         new Toppings { Topping = "Chili and more", ToppingPrice = 0 }, //18
-        new Toppings { Topping = "Tuna", ToppingPrice= 0 },//19
+        new Toppings { Topping = "Feta", ToppingPrice= 0 },//20
+        new Toppings { Topping = "Spinach", ToppingPrice= 0 },//21
+        new Toppings { Topping = "Pesto", ToppingPrice= 0 },//22
         // Add more toppings as needed
         };
 
