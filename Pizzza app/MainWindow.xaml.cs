@@ -86,28 +86,32 @@ namespace Pizzza_app
 
         List<Toppings> availableToppings = new List<Toppings>
         {
-        new Toppings { Topping = "Pepperoni", ToppingPrice = 0 },//0
-        new Toppings { Topping = "Mushrooms", ToppingPrice = 0 },//1
-        new Toppings { Topping = "Sausage", ToppingPrice = 0 },//2
-        new Toppings { Topping = "Gouda", ToppingPrice = 0 },//3
-        new Toppings { Topping = "Cheddar", ToppingPrice = 0 },//4
-        new Toppings { Topping = "Cheese", ToppingPrice = 0 },//5
-        new Toppings { Topping = "Basil", ToppingPrice = 0 },//6
-        new Toppings { Topping = "Mozzarela", ToppingPrice = 0 },//7
-        new Toppings { Topping = "Tomato", ToppingPrice = 0 },//8
-        new Toppings { Topping = "BBQ Sauce", ToppingPrice = 0 },//9
-        new Toppings { Topping = "Crab", ToppingPrice = 0 },//10
-        new Toppings { Topping = "Onions", ToppingPrice = 0 },//11
-        new Toppings { Topping = "Red Onion", ToppingPrice = 0 },//12
-        new Toppings { Topping =  "Bacon", ToppingPrice = 0 },//13
-        new Toppings { Topping =  "Chicken", ToppingPrice = 0 },//14
-        new Toppings { Topping =  "Pork", ToppingPrice = 0 },//15
-        new Toppings { Topping = "ham", ToppingPrice = 0},//16
-        new Toppings { Topping = "pineapple", ToppingPrice = 0 },//17
-        new Toppings { Topping = "Chili and more", ToppingPrice = 0 }, //18
-        new Toppings { Topping = "Feta", ToppingPrice= 0 },//20
-        new Toppings { Topping = "Spinach", ToppingPrice= 0 },//21
-        new Toppings { Topping = "Pesto", ToppingPrice= 0 },//22
+        new Toppings { Topping = "Pepperoni", ToppingPrice = 12 },//0
+        new Toppings { Topping = "Mushrooms", ToppingPrice = 14 },//1
+        new Toppings { Topping = "Sausage", ToppingPrice = 10 },//2
+        new Toppings { Topping = "Gouda", ToppingPrice = 10 },//3
+        new Toppings { Topping = "Cheddar", ToppingPrice = 14 },//4
+        new Toppings { Topping = "Cheese", ToppingPrice = 12 },//5
+        new Toppings { Topping = "Basil", ToppingPrice = 8 },//6
+        new Toppings { Topping = "Mozzarela", ToppingPrice = 8 },//7
+        new Toppings { Topping = "Tomato", ToppingPrice = 6 },//8
+        new Toppings { Topping = "BBQ Sauce", ToppingPrice = 10 },//9
+        new Toppings { Topping = "Crab", ToppingPrice = 10 },//10
+        new Toppings { Topping = "Onions", ToppingPrice = 10 },//11
+        new Toppings { Topping = "Red Onion", ToppingPrice = 10 },//12
+        new Toppings { Topping =  "Bacon", ToppingPrice = 16 },//13
+        new Toppings { Topping =  "Chicken", ToppingPrice = 10 },//14
+        new Toppings { Topping =  "Pork", ToppingPrice = 10 },//15
+        new Toppings { Topping = "ham", ToppingPrice = 10 },//16
+        new Toppings { Topping = "pineapple", ToppingPrice = 12 },//17
+        new Toppings { Topping = "Chili and more", ToppingPrice = 24 }, //18
+        new Toppings { Topping = "Goat meat", ToppingPrice = 10 }, //19
+        new Toppings { Topping = "Feta", ToppingPrice = 16 },//20
+        new Toppings { Topping = "Spinach", ToppingPrice = 10 },//21
+        new Toppings { Topping = "Pesto", ToppingPrice = 16 },//22
+        new Toppings { Topping = "olives", ToppingPrice = 16 }, //23
+        new Toppings { Topping = "Artichoke", ToppingPrice = 10 }, //24
+        new Toppings { Topping = "Moar sauce", ToppingPrice = 12 } // 25
         // Add more toppings as needed
         };
 
@@ -120,19 +124,19 @@ namespace Pizzza_app
             pizzaItems.Add(new Pizza_Menu { Number = 3, Name = "Vegetarian Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[1], availableToppings[8] }, Price = 100M, Description = "Veggie-Loaded Pizza" });
             pizzaItems.Add(new Pizza_Menu { Number = 4, Name = "Meat Lovers Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[0], availableToppings[15], availableToppings[16], availableToppings[2] }, Price = 100M, Description = "For the Meat Lovers" });
             pizzaItems.Add(new Pizza_Menu { Number = 5, Name = "BBQ Chicken Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[14], availableToppings[9] }, Price = 80M, Description = "Tangy BBQ Chicken Pizza" });
-            pizzaItems.Add(new Pizza_Menu { Number = 6, Name = "Supreme Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[0] }, Price = 80M, Description = "Loaded Supreme Pizza" });
-            pizzaItems.Add(new Pizza_Menu { Number = 7, Name = "Hawaiian Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[0] }, Price = 79.99M, Description = "Sweet and Savory Hawaiian Pizza" });
-            pizzaItems.Add(new Pizza_Menu { Number = 8, Name = "Four Cheese Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[0] }, Price = 80m, Description = "A Cheesy Delight" });
+            pizzaItems.Add(new Pizza_Menu { Number = 6, Name = "Supreme Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[0], availableToppings[2], availableToppings[16] }, Price = 80M, Description = "Loaded Supreme Pizza" });
+            pizzaItems.Add(new Pizza_Menu { Number = 7, Name = "Hawaiian Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[16], availableToppings[17], availableToppings[3] }, Price = 79.99M, Description = "Sweet and Savory Hawaiian Pizza" });
+            pizzaItems.Add(new Pizza_Menu { Number = 8, Name = "Four Cheese Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[20], availableToppings[7] }, Price = 80m, Description = "A Cheesy Delight" });
             pizzaItems.Add(new Pizza_Menu { Number = 9, Name = "Mushroom Truffle Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[0] }, Price = 80M, Description = "Elegant Mushroom and Truffle Pizza" });
-            pizzaItems.Add(new Pizza_Menu { Number = 10, Name = "Sausage and Pepper Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[0] }, Price = 75M, Description = "Classic Combo" });
-            pizzaItems.Add(new Pizza_Menu { Number = 11, Name = "Buffalo Chicken Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[0] }, Price = 80M, Description = "Spicy Buffalo Chicken Pizza" });
-            pizzaItems.Add(new Pizza_Menu { Number = 12, Name = "Pesto Veggie Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[0] }, Price = 70M, Description = "Fresh and Flavorful" });
-            pizzaItems.Add(new Pizza_Menu { Number = 13, Name = "Barbecue Bacon Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[0] }, Price = 70M, Description = "Sweet and Savory Combo" });
-            pizzaItems.Add(new Pizza_Menu { Number = 14, Name = "Artichoke and Olive Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[0] }, Price = 70M, Description = "Mediterranean Flavors" });
-            pizzaItems.Add(new Pizza_Menu { Number = 15, Name = "Spinach and Feta Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[0] }, Price = 65M, Description = "Greek Inspired Pizza" });
-            pizzaItems.Add(new Pizza_Menu { Number = 16, Name = "Bacon and Egg Breakfast Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[0] }, Price = 90M, Description = "Morning Delight" });
-            pizzaItems.Add(new Pizza_Menu { Number = 17, Name = "BBQ Pork Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[0] }, Price = 85M, Description = "Hearty BBQ Pork Pizza" });
-            pizzaItems.Add(new Pizza_Menu { Number = 18, Name = "Pepper and Onion Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[0] }, Price = 80M, Description = "Simple and Delicious" });
+            pizzaItems.Add(new Pizza_Menu { Number = 10, Name = "Sausage and Pepper Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[2] }, Price = 75M, Description = "Classic Combo" });
+            pizzaItems.Add(new Pizza_Menu { Number = 11, Name = "Buffalo Chicken Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[15] }, Price = 80M, Description = "Spicy Buffalo Chicken Pizza" });
+            pizzaItems.Add(new Pizza_Menu { Number = 12, Name = "Pesto Veggie Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[22] }, Price = 70M, Description = "Fresh and Flavorful" });
+            pizzaItems.Add(new Pizza_Menu { Number = 13, Name = "Barbecue Bacon Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[9], availableToppings[13] }, Price = 70M, Description = "Sweet and Savory Combo" });
+            pizzaItems.Add(new Pizza_Menu { Number = 14, Name = "Artichoke and Olive Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[23], availableToppings[24] }, Price = 70M, Description = "Mediterranean Flavors" });
+            pizzaItems.Add(new Pizza_Menu { Number = 15, Name = "Spinach and Feta Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[21], availableToppings[20] }, Price = 65M, Description = "Greek Inspired Pizza" });
+            pizzaItems.Add(new Pizza_Menu { Number = 16, Name = "Bacon Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[13] }, Price = 90M, Description = "Morning Delight" });
+            pizzaItems.Add(new Pizza_Menu { Number = 17, Name = "BBQ Pork Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[15], availableToppings[9] }, Price = 85M, Description = "Hearty BBQ Pork Pizza" });
+            pizzaItems.Add(new Pizza_Menu { Number = 18, Name = "Pepper and Onion Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[11], availableToppings[12], availableToppings[0] }, Price = 80M, Description = "Simple and Delicious" });
             pizzaItems.Add(new Pizza_Menu { Number = 19, Name = "Seafood Supreme Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[10], availableToppings[19] }, Price = 90M, Description = "Seafood Lover's Delight" });
             pizzaItems.Add(new Pizza_Menu { Number = 20, Name = "DEMO-MAN", Toppings =new List<Toppings> { availableToppings[18] }, Price = 110m, Description ="if you want to die"});
             drinkItems.Add(new Drink_Menu { Number = 1, Name = "Soda", Price = 12M });
