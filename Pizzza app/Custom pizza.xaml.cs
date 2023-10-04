@@ -37,11 +37,7 @@ namespace Pizzza_app
             // Create a new Pizza_Menu instance with selected customization
             Pizza_Menu customPizza = new Pizza_Menu
             {
-              //  Number = pizzaItems.Count + 1, // Assign a unique number
-               // Name = originalPizzaName + " +", // Append a "+" to the original name
-                //Price = CalculateCustomPizzaPrice(), // Calculate the price based on selections
-                //Description = "Custom " + originalPizzaName, // Customize the description
-                //Toppings = selectedToppings // Add selected toppings
+
             };
 
             // Add the custom pizza to the pizzaItems list in the main window
