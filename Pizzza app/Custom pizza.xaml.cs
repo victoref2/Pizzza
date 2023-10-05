@@ -26,7 +26,6 @@ namespace Pizzza_app
         public Custom_pizza(List<Toppings> selectedToppings)
         {
             InitializeComponent();
-            this.selectedToppings = selectedToppings;
 
             // You can now use 'this.selectedToppings' in this window to access the selected pizza's toppings.
         }
