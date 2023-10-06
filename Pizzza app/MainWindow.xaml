@@ -20,7 +20,7 @@
                 <DataGridTextColumn Header="Price" Binding="{Binding MenuItem.Price}" />
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="Custom_pizza" Content="Custom" HorizontalAlignment="Left" Margin="439,138,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="Button_Click_1"/>
+        <Button x:Name="Custom_pizza" Content="Custom" HorizontalAlignment="Left" Margin="439,138,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="Button_Click_1" RenderTransformOrigin="0.5,0.5"/>
 
     </Grid>
 </Window>

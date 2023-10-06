@@ -181,6 +181,18 @@ namespace Pizzza_app
 
         }
 
+        public void AddCustomPizzaToCart(Pizza_Menu customPizza)
+        {
+            // Create a CartItem instance for the custom pizza
+            CartItem cartItem = new CartItem(customPizza);
+
+            // Add the custom pizza to the cartItems collection
+            cartItems.Add(cartItem);
+
+            // Refresh the cart display or any related UI elements here
+            CartItemsGrid.Items.Refresh();
+        }
+
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -280,8 +292,8 @@ namespace Pizzza_app
         {
             if (MenuSelect.SelectedItem is Pizza_Menu selectedPizza)
             {
-                // Create an instance of the Custom_pizza window
-                Custom_pizza customPizzaWindow = new Custom_pizza(selectedPizza.Toppings);
+                // Create an instance of the Custom_pizza window and pass the availableToppings list
+                Custom_pizza customPizzaWindow = new Custom_pizza(selectedPizza.Toppings, availableToppings);
 
                 // Show the window
                 customPizzaWindow.ShowDialog();
@@ -291,5 +303,6 @@ namespace Pizzza_app
                 MessageBox.Show("Please select a pizza from the menu.");
             }
         }
+
     }
 }

@@ -21,14 +21,21 @@ namespace Pizzza_app
     {
         // Add properties to store customization options, e.g., selectedToppings
 
-        private List<Toppings> selectedToppings;
+        private List<Toppings> selectedToppings = new List<Toppings>();
 
-        public Custom_pizza(List<Toppings> selectedToppings)
+        public Custom_pizza(List<Toppings> selectedToppings, List<Toppings> availableToppings)
         {
             InitializeComponent();
+            this.selectedToppings = selectedToppings;
 
-            // You can now use 'this.selectedToppings' in this window to access the selected pizza's toppings.
+            // Set the ItemsSource of the Toppings DataGrid
+            Toppings.ItemsSource = availableToppings;
+
+            // Set the ItemsSource of the Selected_toppings DataGrid
+            Selected_toppings.ItemsSource = this.selectedToppings;
         }
+
+
 
         // Handle the customization and create the custom pizza
         private void CustomizeButton_Click(object sender, RoutedEventArgs e)
@@ -58,17 +65,84 @@ namespace Pizzza_app
         {
 
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private decimal CalculateCustomPizzaPrice(List<Toppings> toppings)
         {
+            // Implement the pricing logic for the custom pizza based on selected toppings
+            // You can calculate the price by summing the prices of selected toppings
+            decimal totalPrice = 50;
+            foreach (var topping in toppings)
+            {
+                totalPrice += + topping.ToppingPrice;
+            }
+            
+            return totalPrice;
+        }
 
+        int Customer = 1;
+            private void Button_Click(object sender, RoutedEventArgs e) 
+        { 
+            // Handle the "Færdig" (Finish) button click event
+            if (selectedToppings.Count > 0)
+            {
+                // Create a custom pizza with selected toppings
+                Pizza_Menu customPizza = new Pizza_Menu
+                {
+                    Name = "Custom Pizza : " + Customer,
+                    Toppings = selectedToppings.ToList(), // Create a copy of selectedToppings
+                    Price = CalculateCustomPizzaPrice(selectedToppings),
+                    Description = "Customized Pizza",
+                    
+                };
+                Customer++;
+                // Add the custom pizza to the shopping cart in the main window
+                MainWindow mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+                if (mainWindow != null)
+                {
+                    mainWindow.AddCustomPizzaToCart(customPizza);
+                }
+
+                this.Close(); // Close the custom pizza window
+            }
+            else
+            {
+                MessageBox.Show("Please select at least one topping.");
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-             
+
+            // Handle the "Tilføj" (Add) button click event
+            if (Toppings.SelectedItem is Toppings selectedToppingItem)
+            {
+
+                // Move the selected topping from "Toppings" to the selectedToppings list
+                selectedToppings.Add(selectedToppingItem);
+
+                // Refresh the "Selected_toppings" DataGrid
+                Selected_toppings.Items.Refresh();
+
+                // Your code to add the selected topping
+            }
+            else
+            {
+                MessageBox.Show("Please select a topping from the list.");
+            }
             
 
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            // Handle the "Fjern" (Remove) button click event
+            if (Selected_toppings.SelectedItem is Toppings selectedTopping)
+            {
+                // Remove the selected topping from the selectedToppings list
+                selectedToppings.Remove(selectedTopping);
+
+                // Refresh the "Selected_toppings" DataGrid
+                Selected_toppings.Items.Refresh();
+            }
         }
     }
 }

@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="Custom_pizza" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="Toppings" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,10,540,10" SelectionChanged="DataGrid_SelectionChanged"/>
-        <DataGrid x:Name="Selected_toppings" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="540,10,10,10" SelectionChanged="DataGrid_SelectionChanged_1"/>
-        <Button Content="Fjern" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="75"/>
+        <DataGrid x:Name="Toppings"  Margin="10,10,540,10" SelectionChanged="DataGrid_SelectionChanged"/>
+        <DataGrid x:Name="Selected_toppings"  Margin="540,10,10,10" SelectionChanged="DataGrid_SelectionChanged_1"/>
+        <Button Content="Fjern" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="75" Click="Button_Click_2"/>
         <CheckBox Content="Gluten fri" HorizontalAlignment="Center" Margin="0,266,0,0" VerticalAlignment="Top" Height="14" Width="76"/>
         <Button Content="Tilføj" HorizontalAlignment="Center" Margin="0,137,0,0" VerticalAlignment="Top" Height="50" Width="75" Click="Button_Click_1"/>
         <Button Content="Færdig" Margin="435,324,265,10" Click="Button_Click" Height="100" Width="100"/>
