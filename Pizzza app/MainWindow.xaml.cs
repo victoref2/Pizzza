@@ -135,7 +135,7 @@ namespace Pizzza_app
             pizzaItems.Add(new Pizza_Menu { Number = 17, Name = "BBQ Pork Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[15], availableToppings[9] }, Price = 85M, Description = "Hearty BBQ Pork Pizza" });
             pizzaItems.Add(new Pizza_Menu { Number = 18, Name = "Pepper and Onion Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[11], availableToppings[12], availableToppings[0] }, Price = 80M, Description = "Simple and Delicious" });
             pizzaItems.Add(new Pizza_Menu { Number = 19, Name = "Seafood Supreme Pizza", Toppings = new List<Toppings> { availableToppings[5], availableToppings[10], availableToppings[19] }, Price = 90M, Description = "Seafood Lover's Delight" });
-            pizzaItems.Add(new Pizza_Menu { Number = 20, Name = "DEMO-MAN", Toppings =new List<Toppings> { availableToppings[18] }, Price = 110m, Description ="if you want to die"});
+            pizzaItems.Add(new Pizza_Menu { Number = 20, Name = "DEMO-MAN or the DEMON", Toppings =new List<Toppings> { availableToppings[18] }, Price = 110m, Description ="if you want to die"});
             drinkItems.Add(new Drink_Menu { Number = 1, Name = "Soda", Price = 12M });
             drinkItems.Add(new Drink_Menu { Number = 2, Name = "Lemonade", Price = 5.99M });
             drinkItems.Add(new Drink_Menu { Number = 3, Name = "Iced Tea", Price = 6.49M });
@@ -200,7 +200,7 @@ namespace Pizzza_app
             ComboBoxItem selectedType = Selection.SelectedItem as ComboBoxItem;
             string menuType = selectedType.Content.ToString();
 
-            if (menuType == "Pizza" && MenuSelect.ItemsSource != pizzaItems)
+            if       (menuType == "Pizza" && MenuSelect.ItemsSource != pizzaItems)
             {
                 MenuSelect.ItemsSource = pizzaItems;
 
