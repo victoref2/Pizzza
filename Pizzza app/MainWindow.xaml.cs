@@ -72,9 +72,6 @@ namespace Pizzza_app
         // Additional properties specific to extras can be added here
     }
 
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         private List<Pizza_Menu> pizzaItems = new List<Pizza_Menu>();
